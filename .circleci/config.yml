@@ -3,7 +3,7 @@ jobs:
   build:
     docker:
       - image: circleci/python:2.7-jessie
-    working_directory: ~/nickelfox-web-python
+    working_directory: ~/nickelfox-web
     steps:
       - add_ssh_keys:
           fingerprints:
