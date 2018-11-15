@@ -25,7 +25,7 @@ jobs:
           name: Remove unimportant stuff
           command: cd nickelfox-python && rm -rf .circleci && rm .gitignore
       - run:
-          name: Fix host authenticity for 18.213.152.190
+          name: Fix host authenticity for 18.213.152.190  
           command: |
             ssh-keyscan 18.213.152.190 >> ~/.ssh/known_hosts
             echo "Host *" >> ~/.ssh/config
@@ -41,4 +41,4 @@ workflows:
       - build:
           filters:
             branches:
-              only: develop             
+              only: master             
