@@ -1,0 +1,73 @@
+
+#testimonials  .slick-dots li {
+    margin: auto 8px
+}
+#testimonials  .slick-dots li button::before{
+    content:'' !important;
+    left:50%;
+    top:50%;
+    transform:translate(-50%,-50%);
+    background:rgb(92, 92, 92);
+    opacity:0.3;
+    height:2px;
+    max-width:25px;
+}
+#testimonials .slick-dots li.slick-active button::before{
+    opacity:1;
+}
+
+.testimonials__head::before{
+    content:'';
+    position:absolute;
+    top:10px;
+    left:50%;
+    transform:translateX(-50%);
+    display:inline-block;
+    width:40px;
+    height:2px;
+    background:black;
+    }
+
+.testimonials-carousel__reviewer{
+    color:#555464;
+}
+
+.testimonials-carousel__control-wpr {
+    height:80px;
+    opacity:1;
+}
+.testimonials-carousel__control-inr{
+    max-width:150px;
+}
+
+
+
+
+
+@media only screen and (min-width : 768px) {
+	
+}
+@media only screen and (min-width : 1024px) {
+	
+}
+@media only screen and (min-width : 1200px) {
+	.testimonials__head::before{	
+        left:0px;
+        transform:translateX(0%);
+        }
+
+    .testimonials__text{
+        max-width:750px;
+        margin:auto;
+    }
+        #testimonial-indicators{
+            top:87%;
+        }
+        .testimonials-carousel__control-wpr {
+        opacity:0;
+        pointer-events: none;
+        }
+        #testimonials .slick-dots{
+            top:auto;
+        }
+}

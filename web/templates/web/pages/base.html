@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{% block title %}{% endblock title%}</title>
+    {% load static compress %}
+    <link rel='shortcut icon' href="{% static 'favicon.png' %}" type='image/png' />
+    <link rel=" stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Karla:400,700" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    {% compress css %}
+    <link rel="stylesheet" type="text/x-scss" href="{% static 'web/css/styles.scss' %}">
+     {% endcompress %}
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" /> 
+    {# for google analytics script #}
+    {% block google_analytics %}
+    {% endblock google_analytics %}
+
+</head>
+
+<body id="body">
+    {%include 'web/partials/_header.html' %}
+    {# main content of page #}
+    {% block content %}
+    {% endblock content%}
+    {% include 'web/partials/_footer.html' %}
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+    <script type="text/javascript" src="{% static 'web/js/main.js' %}"></script>
+    <script type="text/javascript" src="{% static 'web/js/navbar-state.js' %}"></script>
+    <script src="{% static 'web/js/footer-video.js' %}"></script>
+    <script src="{% static 'web/js/ga-events.js' %}"></script>
+    <!-- JS SCRIPTS -->
+
+    {# js belonging to corresponding page #} {% block extra_js %} {% endblock extra_js %}
+</body>
+
+</html>

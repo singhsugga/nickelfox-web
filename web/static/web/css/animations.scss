@@ -1,0 +1,62 @@
+.text-wave-on-load{
+    -webkit-transform: translate3d(0px,25px,0px);
+	-moz-transform: translate3d(0px,25px,0px);
+	-ms-transform: translate3d(0px,25px,0px);
+	-o-transform: translate3d(0px,25px,0px);
+    transform: translate3d(0px,25px,0px);
+}
+.text-wave-on-click,.text-wave-on-enter{
+    -webkit-transform: translate3d(0px,15px,0px);
+	-moz-transform: translate3d(0px,15px,0px);
+	-ms-transform: translate3d(0px,15px,0px);
+	-o-transform: translate3d(0px,15px,0px);
+    transform: translate3d(0px,15px,0px);
+}
+.text-wave-on-load,.text-wave-on-click,.text-wave-on-enter{
+    -webkit-transition: transform 300ms cubic-bezier(0.39,-0.12, 0, 0.76) , opacity 300ms cubic-bezier(0.39,-0.12, 0, 0.76) ;
+	-moz-transition: transform 300ms cubic-bezier(0.39,-0.12, 0, 0.76) , opacity 300ms cubic-bezier(0.39,-0.12, 0, 0.76) ;
+	-ms-transition: transform 300ms cubic-bezier(0.39,-0.12, 0, 0.76) , opacity 300ms cubic-bezier(0.39,-0.12, 0, 0.76) ;
+	-o-transition: transform 300ms cubic-bezier(0.39,-0.12, 0, 0.76) , opacity 300ms cubic-bezier(0.39,-0.12, 0, 0.76) ;
+    transition: transform 300ms cubic-bezier(0.39,-0.12, 0, 0.76) , opacity 300ms cubic-bezier(0.39,-0.12, 0, 0.76) ;
+    opacity: 0;
+}
+
+
+.text-wave-on-load:nth-child(1){
+    transition-duration: 0.4s;
+}
+.text-wave-on-load:nth-child(2){
+    transition-duration: 0.6s;
+}
+.text-wave-on-load:nth-child(3){
+    transition-duration: 0.8s;
+}
+.text-wave-on-load:nth-child(4){
+    transition-duration: 0.9s;
+}
+.text-wave-on-load:nth-child(5){
+    transition-duration: 1s;
+}
+.text-wave-on-click:nth-child(1),.text-wave-on-enter:nth-child(1){
+    transition-duration: 0.6s;
+}
+.text-wave-on-click:nth-child(2),.text-wave-on-enter:nth-child(2){
+    transition-delay: 100ms;
+}
+.text-wave-on-click:nth-child(3),.text-wave-on-enter:nth-child(3){
+    transition-delay: 140ms;
+}
+.text-wave-on-click:nth-child(4),.text-wave-on-enter:nth-child(4){
+    transition-delay: 200ms;
+}
+.text-wave-on-click:nth-child(5),.text-wave-on-enter:nth-child(5){
+    transition-delay: 280ms;
+}
+.text-wave-on-click:nth-child(6),.text-wave-on-enter:nth-child(6){
+    transition-delay: 380ms;
+}
+
+.text-wave-active {
+    transform: translate3d(0px,0px,0px);
+    opacity: 1;
+}

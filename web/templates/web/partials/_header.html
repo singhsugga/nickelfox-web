@@ -1,0 +1,46 @@
+  {% load static %}
+  <header id="header">
+    <nav id="navbar" class="fixed-top p-ev-none">
+        <div class="container test4 h-100 position-relative">
+            <div class="d-flex align-items-center justify-content-between test3 h-100">
+                <div class="d-flex align-items-center hmb-wpr cursor position-relative p-ev-auto">
+                    <img id="hmbrgr-icon-black" class="hamburger" src="{% static 'web/images/hmbrgr-b.svg' %}" onclick="toggle_menu()"
+                        alt="hamburger menu icon">
+                    <img id="hmbrgr-icon-x" class="hamburger position-absolute" src="{% static 'web/images/hmbrgr-x.svg' %}" alt="hamburger close menu icon">
+                    <img id="hmbrgr-icon-white" class="hamburger position-absolute" src="{% static 'web/images/hmbrgr-w.svg' %}"
+                        onclick="toggle_menu()" alt="hamburger menu icon">
+                </div>
+                <div class="d-flex align-items-center cursor logo-wpr position-relative p-ev-auto">
+                    <div>
+                        <a href="index.html">
+                            <img id="nfx-logo-black" class="nfx-logo cursor" alt="nickelfox logo" src="{% static 'web/images/nf-logo-b.svg' %}" >
+                        </a>
+                    </div>
+                    <div class="position-absolute">
+                        <a href="index.html">
+                            <img id="nfx-logo-white" class="nfx-logo  cursor" alt="nickelfox logo" src="{% static 'web/images/nf-logo-w.svg' %}" >
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- MAIN MENU -->
+    <div id="main-menu" class="container-fluid position-fixed main-menu d-flex align-items-center">
+        <section id="menu-wpr" class="menu-wpr w-100">
+            <div class="container test3 ">
+                <ul class="main-menu-ul ml-lg-5 p-0">
+                    <li class="text-wave-on-click main-menu-li  py-3 fs-38 fw-bold ">
+                        <a  href="{% url 'home' %}" data-scope="main-menu">Home</a>
+                    </li>
+                    <li class="text-wave-on-click main-menu-li  py-3 fs-38 fw-bold ">
+                        <a href="{% url 'careers' %}" data-scope="main-menu">Careers</a>
+                    </li>
+                    <li class="text-wave-on-click main-menu-li  py-3 fs-38 fw-bold ">
+                        <a href="{% url 'contact' %}" data-scope="main-menu">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </div>
+</header>

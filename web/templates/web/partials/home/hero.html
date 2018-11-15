@@ -1,0 +1,48 @@
+{% load static %}
+<section id="hero">
+    <div id="hero-wpr" class="container-fluid position-relative">
+        <div class="hero-bg-wpr position-absolute replace"></div>
+        <div class="container hero-content-wpr">
+            <div class="ml-1">
+                <div class="pt-5 px-2 px-xl-0 text-center text-xl-left ff-pri fs-20  lh-1-5">
+                    <h1 class="hero__heading text-wave-on-load  mb-5 mx-auto mx-xl-0 px-5 px-xl-0 text-center text-xl-left ff-pri fs-24 fs-xl-38 fw-600">
+                        Nickelfox <br />
+                        <span class="fw-300 fs-20 fs-xl-28">Empowering Ideas</span>
+                    </h1>
+                    <p class="text-wave-on-load  m-0 p-0 fs-16 fs-xl-18 fw-300">Over the past decade, we’ve
+                        redefined the
+                        union of
+                        digital
+                        design and </p>
+                    <p class="text-wave-on-load  m-0 p-0 fs-16 fs-xl-18 fw-300">personalized experiences. Our team
+                        is
+                        dedicated to
+                        helping
+                    </p>
+                    <p class="text-wave-on-load  m-0 p-0 fs-16 fs-xl-18 fw-300">organizations of all sizes convert
+                        their
+                        ideas to
+                        reality.</p>
+                    <p class="text-wave-on-load m-0 mt-5 pt-2 pt-xl-5 fw-400 fs-18">Explore the World of Nickelfox.</p>
+                    <div class="mouse" id="mouse">
+                        <div class="mouse__scroll__wpr text-wave-on-load p-3 pb-5 pb-xl-0 p-md-2 mt-3 mt-xl-5">
+                            <div class="mouse__scroll"></div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+    // PROGRESSIVE IMAGE LOADING
+    // hero Image
+    var hero_img = new Image();
+    hero_img.onload = function () {
+        document.querySelectorAll('.hero-bg-wpr')[0].classList.remove('replace')
+        document.querySelectorAll('.hero-bg-wpr')[0].style.backgroundImage ="url('{% static 'web/images/home/hero-bg-bg.jpg' %}')";
+    }
+    hero_img.src = "{% static 'web/images/home/hero-bg-bg.jpg' %}";
+</script>

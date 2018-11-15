@@ -1,0 +1,180 @@
+.contact__wpr {
+  min-height: 100vh;
+  overflow: hidden;
+  z-index:200;
+}
+
+.contact__progressive-img-wpr {
+  top: 0px;
+  left: 0px;
+  bottom: 0px;
+  right: 0px;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+  transform: scale(1.04);
+  transition: filter 1000ms linear;
+  filter: blur(0px);
+  -webkit-filter: blur(0px);
+}
+
+.contact__progressive-img-wpr.replace {
+  background-image: url('../images/contact/contact-bg-sm.jpg');
+  filter: blur(7px);
+  -webkit-filter: blur(7px);
+}
+
+.contact__social {
+  transition: all 150ms ease-in;
+  transform: scale(1);
+}
+
+.contact__social:hover {
+  cursor: pointer;
+  transition: all 150ms ease-in;
+  transform: scale(1.1);
+}
+
+#contact-modal-wpr {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  z-index: 1000;
+  opacity: 0;
+  transition: opacity 300ms ease-out;
+  right: 0px;
+  bottom: 0px;
+  background: rgba(0, 0, 0, 0.3);
+}
+
+#contact-modal {
+  position: static;
+  top: 50%;
+  transform: translate3d(0, -30%, 0);
+  height: 250px;
+  width: 500px;
+  opacity: 0;
+  transition: opacity 300ms ease-out, transform 300ms ease-out;
+  background: rgba(0, 0, 0, 0.95);
+}
+
+.contact__email-wpr a:hover {
+  text-decoration: underline;
+}
+
+#contact-modal-wpr.active {
+  opacity: 1;
+}
+
+#contact-modal.active {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+
+.contact__form-wpr {
+  max-width: 400px;
+  height: 411px;
+  background: white;
+}
+
+.button-submit {
+  background: black
+}
+
+/* material input design */
+
+/* form starting stylings ------------------------------- */
+
+.group {
+  position: relative;
+  margin-bottom: 45px;
+}
+
+
+#contact-form textarea {
+  resize: none;
+}
+
+
+
+/* BOTTOM BARS ================================= */
+
+.bar {
+  position: relative;
+  display: block;
+  width: 300px;
+}
+
+.bar:before, .bar:after {
+  content: '';
+  height: 2px;
+  width: 0;
+  bottom: 1px;
+  position: absolute;
+  background: #5264AE;
+  transition: 0.2s ease all;
+  -moz-transition: 0.2s ease all;
+  -webkit-transition: 0.2s ease all;
+}
+
+.bar:before {
+  left: 50%;
+}
+
+.bar:after {
+  right: 50%;
+}
+
+
+/* HIGHLIGHTER ================================== */
+
+.highlight {
+  position: absolute;
+  height: 60%;
+  width: 100px;
+  top: 25%;
+  left: 0;
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+
+/* ANIMATIONS ================ */
+
+@-webkit-keyframes inputHighlighter {
+  from {
+    background: rgb(49, 56, 83);
+  }
+  to {
+    width: 0;
+    background: transparent;
+  }
+}
+
+@-moz-keyframes inputHighlighter {
+  from {
+    background: rgb(49, 56, 83);
+  }
+  to {
+    width: 0;
+    background: transparent;
+  }
+}
+
+@keyframes inputHighlighter {
+  from {
+    background: rgb(49, 56, 83);
+  }
+  to {
+    width: 0;
+    background: transparent;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .contact__wpr {
+    height: 100vh;
+  }
+}

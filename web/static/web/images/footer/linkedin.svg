@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="64px" height="64px" viewBox="0 0 64 64" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.3 (57544) - http://www.bohemiancoding.com/sketch -->
+    <title>003-linkedin</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Teacher-Dashboard" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group-26" transform="translate(-263.000000, -536.000000)" fill="#FFFFFF" fill-rule="nonzero">
+            <g id="Group-24" transform="translate(0.000000, 379.000000)">
+                <g id="Group-22" transform="translate(263.000000, 157.000000)">
+                    <g id="003-linkedin">
+                        <path d="M54.625,0 L9.375,0 C4.20605475,0 0,4.20605475 0,9.375 L0,54.625 C0,59.7939453 4.20605475,64 9.375,64 L54.625,64 C59.7939453,64 64,59.7939453 64,54.625 L64,9.375 C64,4.20605475 59.7939453,0 54.625,0 Z M22.625,50.75 L15.125,50.75 L15.125,24.5 L22.625,24.5 L22.625,50.75 Z M22.625,20.75 L15.125,20.75 L15.125,13.25 L22.625,13.25 L22.625,20.75 Z M48.875,50.75 L41.375,50.75 L41.375,35.75 C41.375,33.6826172 39.6923828,32 37.625,32 C35.5576172,32 33.875,33.6826172 33.875,35.75 L33.875,50.75 L26.375,50.75 L26.375,24.5 L33.875,24.5 L33.875,25.9135742 C35.8398438,25.3027344 37.116211,24.5 39.5,24.5 C44.5864258,24.5053711 48.875,29.0683594 48.875,34.4609375 L48.875,50.75 Z" id="Shape"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

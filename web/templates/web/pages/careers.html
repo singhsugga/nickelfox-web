@@ -1,0 +1,354 @@
+{% extends 'web/pages/base.html' %}
+
+{% block title %}
+Nickelfox | Careers
+{% endblock %}
+
+{% block google_analytics %}
+<script>
+    (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date(); a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+    ga('create', 'UA-81901466-1', 'auto');
+    ga('send', 'pageview');
+</script>
+{% endblock google_analytics%}
+
+{% load static %}
+{% block content %}
+<!-- CAREERS SECTION -->
+<section id="careers" class="careers dark_section">
+
+    <div class="careers__wpr position-relative">
+        <div class="careers__progressive_img-wpr position-absolute replace"></div>
+        <div class="container py-5">
+            <div class="careers__title-wpr position-relative pr-xl-5 text-white text-center text-xl-left">
+                <h1 class="fs-24 fs-lg-38 fw-400 lh-2 m-0 mb-3 mb-xl-0">Why Join Us?</h1>
+                <p class="fs-16 fs-lg-18 fw-300 lh-1-8 lh-xl-n  px-3 px-lg-0 pr-xl-5">
+                    To attract and retain top
+                    talent we offer attractive packages.<br /> We also provide an environment where you’ll play a
+                    key part in a friendly, diverse team.
+                </p>
+            </div>
+
+            <div class="row no-gutters">
+                <div class="col-12 col-xl-3 mb-4 mb-xl-0">
+                    <div class="careers__drpdn-wpr position-relative mx-auto mx-xl-0 text-white">
+                        <div id="btn" role="button" class="careers__drpdn-btn d-flex px-4 align-items-center text-dark w-100">
+                            <span id="job-list-header" class="fs-18">Current Openings</span>
+                            <img id="careers__drpdn-caret" class="drpdn-caret ml-auto" src="{% static 'web/images/common/caret.svg' %}">
+                        </div>
+                        <div id="drpdn-list" class="positions-list__drpdn w-100">
+                            <ul id="positions-list" class="positions-list m-0 p-0 fs-15 fs-xl-12 fw-300">
+                                <li>Backend Engineer (Python)</li>
+                                <li>iOS Developer</li>
+                                <li>Android developer</li>
+                                <li>UI/UX Design Intern</li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="col-12 col-xl-9 text-white pl-xl-5">
+                    <div class="careers__profile-details-wpr ml-xl-3 px-2 py-5 p-xl-5">
+                        <div id="template_wpr" class="h-100">
+                            <div id="job-profile-row" class="row no-gutters h-100">
+                                <div class="col-12 col-xl-9 m-0 h-100">
+                                    <div class="px-4 text-dark">
+                                        <div class="careers__job-title-wpr">
+                                            <h1 id="job-title" class="careers__job-title fs-22 fs-xl-26 fw-600 m-0 p-0"></h1>
+                                        </div>
+                                        <div class="careers__job-type-wpr d-xl-flex mb-4">
+                                            <p id="job-type" class="fs-14 fw-n m-0">
+                                                <span class="fw-400">Job Type:</span> Full-time
+                                            </p>
+                                            <p class="fs-14 fw-n m-0 ml-xl-5">
+                                                Salary: <span id="job-compensation"></span>
+                                            </p>
+                                        </div>
+                                        <div class="careers__job-location-wpr d-flex align-items-center my-3">
+                                            <img src="{% static 'web/images/common/map-marker.svg' %}" alt="map-marker">
+                                            <span id="job-location" class="ml-3 fs-16 fw-300"></span>
+                                        </div>
+                                        <div>
+                                            <p id="title-announcement" class="fs-18 fw-n m-0"></p>
+                                        </div>
+                                        <div class="careers__job-responsibilities-wpr my-3 mb-5">
+                                            <span class="fs-18 fw-n">Responsibilities</span>
+                                            <ul id="job-responsibilities" class="careers__job-responsibilities-list fs-16 fw-300">
+
+                                            </ul>
+                                        </div>
+                                        <div class="careers__job-skills-wpr my-3 mb-5">
+                                            <span class="fs-18 fw-n">Skills required</span>
+                                            <ul id="job-skills" class="careers__job-skills-list fs-16 fw-300">
+
+                                            </ul>
+                                        </div>
+                                        <div class="careers__job-experience-wpr pb-3">
+                                            <p id="job-experience" class="fs-16 fw-n m-0"></p>
+                                        </div>
+                                        <div>
+                                            <p class="fs-16 fw-n m-0">You got these? We’re here to take you to the
+                                                next
+                                                level.
+                                            </p>
+                                        </div>
+                                        <div class="careers__job-perks-wpr my-4">
+                                            <span class="fs-18 fw-n">Job Perks</span>
+                                            <ul id="job-perks" class="careers__job-perks-list mt-2 fs-16 fw-300">
+
+                                            </ul>
+                                        </div>
+
+                                        <div class="careers__job-apply-email-wpr mb-3">
+                                            <span class="fs-12 fs-xl-14 fw-n">Send your Resume to <b><a class="blue-link"
+                                                        href="mailto:careers@nickelfox.com">careers@nickelfox.com</a></b></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-xl-3 flex-fill">
+                                    <div class="d-flex flex-column-reverse pr-4 px-4 flex-xl-column h-100">
+                                        <div class="flex-fill careers__apply-btn-wpr">
+                                            <button id="apply-btn" class="careers__apply-btn px-0 d-block mx-auto py-4  btn__normal btn__normal--dark fs-12 cursor fw-300 float-xl-right">
+                                                Apply Now
+                                            </button>
+                                        </div>
+                                        <div class="careers__share-btn-wpr flex-fill d-flex align-items-xl-end justify-content-xl-end ">
+                                            <!-- <a href="#" class="careers__share-btn fs-15 fs-xl-12 fw-300 mb-5 mt-4 mb-xl-0 mt-xl-0">Share
+                                                    with friends</a> -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+    // PROGRESSIVE IMAGE LOADING
+    // hero Image
+    var hero_img = new Image();
+    hero_img.onload = function () {
+        document.querySelectorAll('.careers__progressive_img-wpr')[0].classList.remove('replace');
+        document.querySelectorAll('.careers__progressive_img-wpr')[0].style.backgroundImage = "url('{% static 'web/images/careers/careers-bg.jpg' %}')";
+    }
+    hero_img.src = "{% static 'web/images/careers/careers-bg.jpg' %}";
+</script>
+{% endblock %}
+
+
+{# js based on page #}
+
+{% block extra_js %}
+<script>
+    $(function () {
+        var drpdn_list = $('#drpdn-list');
+        var $device_width = $(window).width();
+        let job_profiles = [
+            {
+                title: 'Backend Engineer (Python)',
+                location: 'Noida',
+                responsibilities: [
+                    'Hands-on knowledge and proven experience with Python Django',
+                    'Experience with AWS, including EC2, ELB, RDS, MySQL, and auto-scaling',
+                    'Can lead the development of Restful APIs, backends, and web applications',
+                    'Making decisions on the technologies being used',
+                    'Being part of a team and standing out as a mentor to your fellow team members',
+                    'Strong strategic & analytical skills',
+                    'Passion for the technology',
+                    'Willingness to learn and experiment',
+                    'Ability to work independently'
+                ],
+                job_skills: [
+                    'Experience with AWS, including EC2, ELB, RDS, MySQL, and auto-scaling',
+                    'Can lead the development of Restful APIs, backends, and web applications.',
+                    'Making decisions on the technologies being used',
+                    'Being part of a team and standing out as a mentor to your fellow team members',
+                    'Strong strategic & analytical skills',
+                    'Passion for the technology',
+                    'Willingness to learn and experiment',
+                    'Ability to work independently'
+                ],
+                job_experience: 'Experience required: 1+ years in Python Django',
+                job_perks: [
+                    'Flexible work hours',
+                    'Friendly environment'
+                ]
+            },
+            {
+                title: 'iOS Developer',
+                location: 'Noida',
+                job_skills: [
+                    " 1.5+ years of solid development experience working on iPhone and iPAD using cocoa framework.",
+                    "Strong programming background in Objective C, OOPs concepts.",
+                    "Proficient with Objective - C or Swift, and Cocoa Touch",
+                    "Experience with iOS frameworks such as Core Data, Core Animation, etc.",
+                    "Experience with offline storage, threading, and performance tuning.",
+                    "Familiarity with RESTful APIs to connect iOS applications to back-end services",
+                    "Knowledge of other web technologies and UI / UX standards",
+                    "Understanding of Apple's design principles and interface guidelines",
+                    "Experience with performance and memory tuning with tools such as Instruments",
+                    "Familiarity with cloud message APIs and push notifications",
+                    "Knack for benchmarking and optimization",
+                    "Proficient understanding of versioning tools",
+                    " Well verse in OOPs/Objective C concepts, Web service and Parsing JSON/XML. ",
+                    "Good in Coding. ",
+                    "Ability to learn & Hard Working. ",
+                    "Strong understanding of technology(C, JSON,coco Touch, XML)",
+                    "Good understanding of consuming REST API's"
+                ],
+                job_experience: 'Experience required: 1.5+ years',
+                job_perks: ['Working: Monday to Saturday (Alternate Saturday Off)', 'Work Timing: Flexible, but most of us join by 10-11am and leave by 7-7.30pm']
+            },
+            {
+                title: 'Android developer',
+                location: 'Noida',
+                responsibilities: [
+                    "Deliver across the entire app life cycle concept, design, build, deploy, test, release to Play Store and support.",
+                    "Strong basic CS concepts and OOPs skills.",
+                    "Maintain the quality of deliverables.",
+                    "Working directly with developers and product managers to conceptualise, build, test and realize products.",
+                    "Optimising performance for the apps"
+                ],
+                job_skills: [
+                    "Experience of development using web technologies",
+                    "Understanding of HTML5, JavaScript, jQuery and PHP",
+                    "Experience building web and native apps",
+                    "Optimising performance for the apps",
+                    "Excellent debugging, optimisation and testing skills",
+                    "Working understanding of AES Encryption algorithms",
+                    "NFC Experience desirable but not essential",
+                    "Android, Java, Sqlite",
+                    "Experience on JSON Parsing, XML Parsing & Web Services(SOAP & REST)",
+                    "Strong Java and Sqlite skills.",
+                    "Good knowledge in Android API, debugger, libraries.",
+                    "Should have good exposure in HTTP, HTTPS, SOAP and REST based application",
+                    "Analysis and Requirement Gathering",
+                    "Application Design and implementation",
+                    "Development of application along with unit testing",
+                    "R & D on new mobile technologies"
+                ],
+                job_experience: 'Experience required: Minimum 2 year of relevant experience in Android applications development.',
+                job_perks: [
+                    "Flexible work hours",
+                    "Friendly environment"
+                ]
+            },
+            {
+                title: 'UI/UX Design Intern',
+                location: 'Noida',
+                responsibilities: [
+                    'Your design skills and talent will be focused primarily on iOS or Android native application design',
+                    'Your skills will extend to creative for Web, UX, branding, and iconography work',
+                    'Creative design work (Screens, Wireframing, Social Media Posts)'
+                ],
+                job_skills: [
+                    'Abilities with Sketch, Illustrator, and Photoshop',
+                    'Good communication skills',
+                    'Passion for design thinking, usability, and UX practices'
+                ],
+                job_experience: '',
+                job_perks: ['Working: Monday to Saturday (Alternate Saturday Off)', 'Work Timing: Flexible, but most of us join by 10-11am and leave by 7-7.30pm']
+            }
+
+        ];
+
+
+        var $job_title = $('#job-title');
+        var $job_location = $('#job-location');
+        var $title_announcement = $('#title-announcement');
+        var $job_responsibilities = $('#job-responsibilities');
+        var $job_skills = $('#job-skills');
+        var $job_experience = $('#job-experience');
+        var $job_perks = $('#job-perks');
+        var $job_compensation = $('#job-compensation');
+        var selected_list = null;
+
+        // * * * * *  When job profile is selected
+        $(document).on('click', '.careers__drpdn-btn', function () {
+            drpdn_list.slideToggle(300);
+            $('#careers__drpdn-caret').toggleClass('active');
+        });
+
+        var first = $('#positions-list li:nth-child(1)');
+        first['from_reload'] = true
+        var bound_render_profile = render_profile.bind(first)
+        bound_render_profile();
+
+
+        function render_profile() {
+            let selected_index = $(this).index();
+
+            if (selected_list !== selected_index) {
+
+                $('#job-profile-row').css('opacity', 0);//opacity to 0 for fade in out effect
+                if ($('#select-request').length) {
+                    $('#select-request').remove();
+                }
+
+                $('#positions-list li.active').removeClass('active');
+                $(this).addClass('active');
+                $('#job-profile-row').css('display', 'flex');
+                $job_title.text(job_profiles[selected_index].title)
+                $job_location.text(job_profiles[selected_index].location);
+                $title_announcement.text('Nickelfox is hiring for ' + job_profiles[selected_index].title + ' position.');
+                $job_experience.text(job_profiles[selected_index].job_experience);
+
+                if (job_profiles[selected_index].job_compensation) {
+                    $job_compensation.text(job_profiles[selected_index].job_compensation);
+                    $job_compensation.parent().css({ "display": "block" });
+                } else {
+                    $job_compensation.parent().css({ "display": "none" });
+                }
+
+                if (job_profiles[selected_index].responsibilities) {
+                    $job_responsibilities.parent().css({ "display": "block" });
+                    var job_resposibilities_rendered = '';
+                    job_profiles[selected_index].responsibilities.forEach(function (item) {
+                        job_resposibilities_rendered = job_resposibilities_rendered + '<li><span>' + item + '</span></li>';
+                    });
+                    $job_responsibilities.html(job_resposibilities_rendered);
+                } else {
+                    $job_responsibilities.parent().css({ "display": "none" });
+                }
+
+                var job_skills_rendered = '';
+                job_profiles[selected_index].job_skills.forEach(function (item) {
+                    job_skills_rendered = job_skills_rendered + '<li>' + item + '</li>';
+                });
+                $job_skills.html(job_skills_rendered);
+
+                var job_perks_rendered = '';
+                job_profiles[selected_index].job_perks.forEach(function (item) {
+                    job_perks_rendered = job_perks_rendered + '<li>' + item + '</li>';
+                });
+                $job_perks.html(job_perks_rendered);
+                $('#job-profile-row').animate({ 'opacity': 1 }, 700);//animate opacity to 1 for fade in out effect
+                selected_list = selected_index;
+
+            }
+            $('#careers .careers__profile-details-wpr').scrollTop(0);
+            if (!this.from_reload && $device_width <= 1024) {
+                drpdn_list.slideToggle(300);
+                $('#careers__drpdn-caret').toggleClass('active');
+
+            }
+        }
+        $('#positions-list').on('click', 'li', render_profile);
+        $(window).on('resize', function () {
+            $device_width = $(window).width();
+        })
+    });
+</script>
+{% endblock extra_js %}

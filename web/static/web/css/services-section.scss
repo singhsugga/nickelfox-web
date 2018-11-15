@@ -1,0 +1,171 @@
+/* ========================== */
+/*
+/*      SERVICES
+/*
+/* ========================== */
+section#expertise {
+	background-color: #000;
+	height: 80vh;
+	overflow: hidden;
+}
+
+.services__tile__content{
+    max-width:276px;
+    color:white;
+}
+.services__tile__btn{
+    top:60%
+}
+
+ .hover-section {
+	height: 720px;
+	width: 100%;
+	position: relative;
+	background-color: #CCC;
+}
+.bg-container,
+.bg-video-container {
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 1;
+}
+.bg-video-container {
+	z-index: 10;
+}
+.bg {
+	display: inline-block;
+	width: calc(100% / 4);
+	float: left;
+	overflow: hidden;
+	transition: width 0.3s linear, opacity 0.3s linear;
+	will-change: width, opacity;
+	transition-delay: 0s;
+}
+.bg.hide {
+	width: 0%;
+	opacity: 0.5;
+	z-index: 0;
+}
+.bg.show {
+	width: 100%;
+	opacity: 1;
+	z-index: 1;
+}
+#expertise.active .bg {
+	transition: width 0s linear, opacity 0.5s linear;
+}
+.bg img {
+	position: absolute;
+    width: auto;
+    height: auto;
+    top: 0%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+#expertise.active .bg img {
+	opacity: 0;
+}
+.bg-video {
+	left: 0;
+	top: 0;
+	opacity: 0;
+    transition: opacity 0.3s linear;
+    will-change: opacity;
+}
+.bg-video.show {
+	opacity: 1;
+}
+.bg-video video {
+	position: absolute;
+    min-width: 100%; 
+    min-height: 100%;
+    top: 0%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.content-container {
+	z-index: 10;
+}
+.content {
+	display: inline-block;
+    width: calc(100% / 4);
+    overflow: hidden;
+    transition: width 0.3s linear;
+    background: rgba(0,0,0,0.75);
+    border-right: 1px solid rgba(255, 255, 255, 0.15);
+    float: left;
+    cursor: pointer;
+}
+.content:last-child {
+    border: 0px;                     
+}
+.content * {
+	transition: all 0.3s linear;
+}
+.content.hide * {
+	opacity: 0.75;
+}
+.content.show * {
+	opacity: 1;
+}
+.content-head {
+	font-size: 24px;
+	color: #FFF;
+	transition: opacity 0.2s linear;
+}
+
+
+/* ========================== */
+/*
+/*     MOBILE SERVICES
+/*
+/* ========================== */
+
+.expertise-mobile__tile{
+	height: 260px;
+	background-size: cover;
+	/* background: rgba(0,0,0,0.75); */
+}
+.expertise-mobile__btn__wpr {
+	bottom:0px
+}
+.expertise-mobile__tile:nth-child(1) {
+	 background: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5)), url("https://basicagency.com/imager/uploads/expertise/Rich-Commerce/Branded-eCommerce-Experiences/4246/ecommerce-strategy-design-development-services-homepage-image_cb6d98fdaff23de180f1a5a5d440ab73.jpg");
+	 background-size:cover;
+}
+.expertise-mobile__tile:nth-child(2){
+	background: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5)), url("https://basicagency.com/imager/uploads/expertise/UX-UI-Web-Digital-Platforms/4252/ux-ui-websites-digital-platforms-homepage-services-image_cb6d98fdaff23de180f1a5a5d440ab73.jpg");
+	background-size: cover;
+}
+.expertise-mobile__tile:nth-child(3){
+	background: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5)), url("https://basicagency.com/imager/uploads/expertise/Brand-Strategy-Campaigns/4258/brand-identity-strategy-and-campaigns-thumbnail-image_cb6d98fdaff23de180f1a5a5d440ab73.jpg");
+	background-size: cover;
+}
+.expertise-mobile__tile:nth-child(4){
+	background: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5)), url("https://basicagency.com/imager/uploads/expertise/Video-Photo-Storytelling/4264/video-production-photography-storytelling-homepage-services-image_cb6d98fdaff23de180f1a5a5d440ab73.jpg");
+	background-size: cover;
+}
+.expertise-mobile__tile__content{
+	z-index: 0;
+	color: #FFF;
+}
+
+#expertise-mobile{
+	display: block
+}
+#expertise{
+	display: none
+}
+
+@media only screen and (min-width: 1200px){
+
+	#expertise-mobile{
+		display: none
+	}
+	#expertise{
+		display: block
+	}
+}
