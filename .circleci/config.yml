@@ -1,0 +1,44 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: circleci/python:2.7-jessie
+    working_directory: ~/nickelfox-web-python
+    steps:
+      - add_ssh_keys:
+          fingerprints:
+            - "f5:09:4a:69:50:07:1f:05:9a:3f:99:40:f7:4f:87:d3"      
+      - checkout
+      - run:
+          name: Install awscli
+          command: sudo pip install awscli
+      - run:
+          name: Archive content of git repo without git files
+          command: git archive -o nickelfox-python.zip --format=zip HEAD
+      - run:
+          name: Create nickelfox folder
+          command: mkdir nickelfox-python
+      - run:
+          name: Unzip nickelfox package
+          command: cd nickelfox-python && unzip ../nickelfox-python.zip
+      - run:
+          name: Remove unimportant stuff
+          command: cd nickelfox-python && rm -rf .circleci && rm .gitignore
+      - run:
+          name: Fix host authenticity for 18.213.152.190
+          command: |
+            ssh-keyscan 18.213.152.190 >> ~/.ssh/known_hosts
+            echo "Host *" >> ~/.ssh/config
+            echo "    User ubuntu" >> ~/.ssh/config
+            echo "    ForwardAgent Yes" >> ~/.ssh/config
+      - run:
+          name: Deploy to EC2
+          command: scp -r nickelfox-python ubuntu@18.213.152.190:~/test-python
+workflows:
+  version: 2
+  build:
+    jobs:
+      - build:
+          filters:
+            branches:
+              only: develop             
